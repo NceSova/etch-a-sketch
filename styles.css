@@ -24,3 +24,21 @@ body {
   background-color: white;
   box-shadow: 12px 8px 16px black;
 }
+
+#settings {
+  padding: 8px;
+  display: flex;
+  width: 400px;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+#clear {
+  box-shadow: 4px 2px 4px black;
+  padding: 8px;
+  border: 2px solid white;
+  background-color: red;
+  color: white;
+  border-radius: 20px;
+}
