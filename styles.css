@@ -5,6 +5,7 @@ body {
   margin: 0;
   box-sizing: border-box;
 }
+
 #canvasContainer {
   display: flex;
   flex: 1;
@@ -12,6 +13,10 @@ body {
   justify-content: center;
   align-items: center;
   background-color: wheat;
+}
+@import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');
+#canvasContainer h1 {
+  font-family: "Pangolin", cursive; 
 }
 
 #canvas {
@@ -23,6 +28,10 @@ body {
   height: 400px;
   background-color: white;
   box-shadow: 12px 8px 16px black;
+}
+
+#canvas div {
+  transition: background-color 0.3s;;
 }
 
 #settings {

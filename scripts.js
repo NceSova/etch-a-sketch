@@ -23,6 +23,10 @@ const pixels = document.querySelectorAll('#canvas div')
 const colorInput = document.querySelector('#color')
 const numInput = document.querySelector('#number')
 
+let mouseDown = false
+document.body.onmousedown = () => (mouseDown = true)
+document.body.onmouseup = () => (mouseDown = false)
+
 numInput.addEventListener('change', (e) => {
   num = e.target.value
   dimensions = 400 / num;
@@ -36,10 +40,14 @@ colorInput.addEventListener('change', (e) => {
   color = e.target.value
 })
 
-canvas.addEventListener("click", (e) => {
+function changeColor(e) {
+  if (e.type === 'mouseover' && !mouseDown) return
   e.preventDefault()
   e.target.style.backgroundColor = `${color}`
-})
+}
+
+canvas.addEventListener('mouseover', changeColor)
+canvas.addEventListener('mousedown', changeColor)
 
 clearButton.addEventListener('click', () => {
   pixels.forEach((pixel) => {
