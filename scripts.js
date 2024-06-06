@@ -19,7 +19,6 @@ function generateCanvas(numOfPixels) {
 }
 
 generateCanvas(num);
-const pixels = document.querySelectorAll('#canvas div')
 const colorInput = document.querySelector('#color')
 const numInput = document.querySelector('#number')
 
@@ -50,6 +49,8 @@ canvas.addEventListener('mouseover', changeColor)
 canvas.addEventListener('mousedown', changeColor)
 
 clearButton.addEventListener('click', () => {
+  console.log("clear!");
+  const pixels = document.querySelectorAll('#canvas div')
   pixels.forEach((pixel) => {
     pixel.style.backgroundColor = 'white'
   })
